@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background: url(./images/dinosaur-crisis.jpg) no-repeat center/cover;
+            overflow: hidden;
+        }
+
+        #fern {
+            width: 100%;
+            height: 100%;
+        }
+
+        .vine {
+            width: 100%;
+            position: absolute;
+            top: -300px;
+            left: -100px;
+        }
+
+        .corner {
+            width: 525px;
+            height: 608px;
+        }
+
+        .leaf-r {
+            height: 100%;
+            transform: scaleX(-1);
+            position: absolute;
+            right: 0%;
+            z-index: -1;
+        }
+
+        .leaf-l {
+            width: 525px;
+            transform: scaleX(-1);
+            position: absolute;
+            left: 0px;
+            top: -100px;
+            z-index: -1;
+        }
+
+        .right-b {
+            position: absolute;
+            right: -200px;
+            bottom: -170px;
+            transform-origin: bottom;
+            transform: rotate(-30deg);
+            animation: right-b 3s 0s infinite ease-out;
+        }
+
+        .right-t {
+            position: absolute;
+            right: -350px;
+            top: -500px;
+            transform-origin: bottom;
+            transform: rotate(-100deg);
+            animation: right-t 3s 0s infinite ease-out;
+        }
+
+        .left-t {
+            position: absolute;
+            top: -500px;
+            left: -350px;
+            transform-origin: bottom;
+            transform: scaleX(-1) rotate(-100deg);
+            animation: left-t 3s 0s infinite ease-out;
+        }
+
+        .left-b {
+            position: absolute;
+            left: -230px;
+            bottom: -120px;
+            transform-origin: bottom;
+            transform: rotate(40deg);
+            animation: left-b 3s 0s infinite ease-out;
+        }
+
+        @keyframes right-b {
+            0% {
+                transform: rotate(-30deg);
+            }
+
+            60% {
+                transform: rotate(-20deg);
+            }
+
+            90% {
+                transform: rotate(-32deg);
+            }
+
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+
+        @keyframes right-t {
+            0% {
+                transform: rotate(-100deg);
+            }
+
+            60% {
+                transform: rotate(-110deg);
+            }
+
+            100% {
+                transform: rotate(-100deg);
+            }
+        }
+
+        @keyframes left-t {
+            0% {
+                transform: scaleX(-1) rotate(-100deg);
+            }
+
+            60% {
+                transform: scaleX(-1) rotate(-85deg);
+            }
+
+            100% {
+                transform: scaleX(-1) rotate(-100deg);
+            }
+        }
+
+        @keyframes left-b {
+            0% {
+                transform: rotate(40deg);
+            }
+
+            60% {
+                transform: rotate(50deg);
+            }
+
+            100% {
+                transform: rotate(40deg);
+            }
+        }
+
+        .text {
+            /* font-family: 'Rye', cursive; */
+            font-family: 'UnifrakturCook', cursive;
+            /* 文字剪輯遮色片 */
+            background: url(./images/skin.jpg) no-repeat center/cover;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            font-size: 200px;
+            color: red;
+            text-shadow:
+                3px 3px 0px rgba(0, 0, 0, 0.5),
+                4px 4px 0px rgba(0, 0, 0, 0.3),
+                5px 5px 0px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            position: absolute;
+            top: 320px;
+            left: 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fern">
+        <img src="./images/遮罩.png" style="width: 100%; height: 100%;">
+        <img class="vine" src="./images/vine04.png">
+        <img class="right-b corner" src="./images/plant03.png">
+        <img class="right-t corner" src="./images/plant03.png">
+        <img class="left-t corner" src="./images/plant03.png">
+        <img class="left-b corner" src="./images/plant03.png">
+        <img class="leaf-r" src="./images/plant02.png">
+        <img class="leaf-l" src="./images/plant01.png">
+        <a href="./dinosaur.html" target="_self" class="text">DINO HUNTER</a>
+    </div>
+</body>
+
+</html>
